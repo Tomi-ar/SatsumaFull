@@ -7,6 +7,7 @@ class Materiales {
     constructor() {
         this.material = [];
         this.value = Math.random()
+        this.test = 1
     }
 
     static getInstance() {
@@ -72,7 +73,7 @@ class Materiales {
             return data
         } catch (error) {
             // logger.log("error", error.message)
-            console.log(error);
+            console.log("El problema esta aca: "+error);
         }
     }
     async getByFrase(frase) {

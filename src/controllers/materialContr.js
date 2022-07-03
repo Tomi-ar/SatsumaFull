@@ -31,18 +31,18 @@ const getController = async (req, res) => {
 }
 
 const getByIDController = async (req, res) => {
-    let material = await materialCont.getByID(req.params.ID);
+    let material = await materialCont.getByID(req.params.id)
     let indice = Math.floor(Math.random()*(4-0+1))
     let comms = material[0].macroCat.COMENTARIOS.slice(indice, indice+2)
-
     res.render('detalles', {resultado: material[0], comms: comms})
     // res.json({data: material})
 }
 
 const getByFraseController = async (req, res) => {
+    console.log("material: "+req.params.MATERIAL);
     let materiales = await materialCont.getByFrase(req.params.MATERIAL);
-    // res.json({data: materiales})
-    res.render('resultados', {resultados: materiales})
+    res.json({data: materiales})
+    // res.render('resultados', {resultados: materiales})
 }
 
 module.exports = { renderBuscador, newController, newComentarioController, getController, getByIDController, getByFraseController }

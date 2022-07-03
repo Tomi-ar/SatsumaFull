@@ -1,7 +1,13 @@
-const { Router } = require('express');
+const { Router } = require("express");
 const router = new Router();
-const { renderBuscador, newController, newComentarioController, getController, getByIDController, getByFraseController } = require("../controllers/materialContr")
-
+const {
+  renderBuscador,
+  newController,
+  newComentarioController,
+  getController,
+  getByIDController,
+  getByFraseController,
+} = require("../controllers/materialContr");
 
 //const macro_materiales = require('../models/macroSchema')
 // router.get("/macros", async (req,res) => {
@@ -9,12 +15,11 @@ const { renderBuscador, newController, newComentarioController, getController, g
 //     res.send(data)
 // })
 
-router.get("/", renderBuscador)
-router.post("/", newController)
-router.get("/:MATERIAL", getByFraseController)
-router.post("/comentario", newComentarioController)
-router.get("/todos", getController)
-router.get("/id/:ID", getByIDController)
-
+router.get("/", renderBuscador);
+router.post("/", newController);
+router.get("/todos", getController); // SI PONGO EN EL BUSCADOR TODOS ME REDIRIGE A TODOS ...
+router.get("/:MATERIAL", getByFraseController);
+router.post("/comentario", newComentarioController);
+router.get("/id/:id", getByIDController);
 
 module.exports = router;
