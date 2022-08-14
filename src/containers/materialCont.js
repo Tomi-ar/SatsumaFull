@@ -44,6 +44,15 @@ class Materiales {
             console.log(error);
         }
     }
+    // PARA ACTUALIZAR LOS COMENTARIOS DE LAS MACRO CATEGORIAS
+    async getMacroByID(ID,comentarios) {
+        try {
+            let data = await macro_materiales.findOneAndUpdate({_id: ID},{COMENTARIOS: comentarios})
+            return data
+        } catch (error) {
+            console.log(error);
+        }
+    }
     async getMateriales() {
         try {
             let data = await materiales.find();
@@ -89,6 +98,22 @@ class Materiales {
             // logger.log("error", error.message)
             console.log(error);
         }
+    }
+    async getMacroCategory() {
+        try {
+            let data = await macro_materiales.find()
+            return data
+          } catch (error) {
+            console.log(error)
+          }
+    }
+    async getMacroCategoryID(ID) {
+        try {
+            let data = await macro_materiales.find({_id: ID})
+            return data
+          } catch (error) {
+            console.log(error)
+          }
     }
 }
 
