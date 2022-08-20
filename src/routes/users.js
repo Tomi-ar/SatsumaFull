@@ -3,7 +3,7 @@ const { Router } = require("express");
 const router = new Router();
 require("../config/passport-local");
 const passport = require("passport");
-const session = require("express-session");
+const session = require("cookie-session");
 const Users = require('../models/userSchema')
 
 router.use(
