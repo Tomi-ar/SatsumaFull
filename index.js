@@ -5,21 +5,21 @@ require("./src/config/mongoDB");
 
 const app = express();
 
+// CORS
+const cors = require("cors");
+app.use(cors())
+
 // BODY PARSER
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MOTOR DE PLANTILLAS
-app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/satsuma-app/build"));
+// app.set("view engine", "ejs");
+// app.set("views", __dirname + "/views");
+app.use(express.static("/satsuma-app/build"));
 app.get('*', (req,res) => {
-  res.sendFile(__dirname + '/satsuma-app/build' + 'index.html')
+  res.sendFile(__dirname + '/satsuma-app/build/' + 'index.html')
 })
-
-// CORS
-const cors = require("cors");
-app.use(cors())
 
 // ROUTER
 const materiales = require("./src/routes/materiales");
