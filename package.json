@@ -11,7 +11,7 @@
         "devMode": "nodemon index.js",
         "start": "node index.js",
         "heroku-prebuild": "",
-        "heroku-postbuild": "cd satsuma-app && npm install && npm run build"
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd satsuma-app && npm install && npm run build"
     },
     "keywords": [],
     "author": "",
