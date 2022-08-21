@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/satsuma-app/build"));
 app.get('*', (req,res) => {
-  res.sendFile('/satsuma-app/build/'+'index.html')
+  res.sendFile('/satsuma-app/public/'+'index.html')
 })
 
 // ROUTER
