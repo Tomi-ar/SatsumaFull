@@ -16,9 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 // MOTOR DE PLANTILLAS
 // app.set("view engine", "ejs");
 // app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/satsuma-app/public"));
+app.use(express.static("/satsuma-app/build"));
 app.get('*', (req,res) => {
-  res.sendFile('/satsuma-app/public/'+'index.html')
+  res.sendFile('/satsuma-app/build/'+'index.html')
 })
 
 // ROUTER
