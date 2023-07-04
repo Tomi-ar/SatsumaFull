@@ -3,7 +3,7 @@ const { Router } = require("express");
 const router = new Router();
 require("../config/passport-local");
 const passport = require("passport");
-const session = require("cookie-session");
+const session = require("express-session");
 const Users = require('../models/userSchema')
 
 router.use(
@@ -14,6 +14,11 @@ router.use(
     cookie: {
       maxAge: 1000 * 60 * 60,
     },
+    cookie: {
+      httpOnly: false,
+      secure: false,
+      maxAge: 10*60*1000
+    }
   })
 );
 router.use(passport.initialize());

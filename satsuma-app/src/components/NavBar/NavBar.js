@@ -7,7 +7,7 @@ const NavBar = (props) => {
     <nav className="barraNav">
       <div className="navBar menuNav">
         <MenuOption link="/login" className="iconNav" icon="sr-user" option="Perfil" />
-        <MenuOption link="/search" className="iconNav" icon="br-search" option="Buscador"/>
+        <MenuOption link="/" className="iconNav" icon="br-search" option="Buscador"/>
         <MenuOption link="/blog" className="iconNav" icon="rr-document" option="Blog"/>
       </div>
     </nav>
