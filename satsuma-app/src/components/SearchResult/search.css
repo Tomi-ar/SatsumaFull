@@ -62,7 +62,12 @@
 
 .search-input {
     display: flex;
-    justify-content: space-between;
+    justify-content:end;
+    margin: auto;
+}
+
+.search-input-item{
+    margin: 0 2rem;
 }
 
 .search-bar {

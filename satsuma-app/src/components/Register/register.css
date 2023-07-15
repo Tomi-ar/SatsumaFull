@@ -1,0 +1,15 @@
+.secondOption{
+  display: inline-block;
+}
+
+.loginButton{
+  font: inherit;
+  border: 1px solid #FF008A;
+  background: #FF008A;
+  color: white;
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0 auto;
+}

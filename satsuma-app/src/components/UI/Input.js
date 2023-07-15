@@ -3,7 +3,7 @@ import './forms.modules.css'
 const Input = (props) => {
   return (
     <div className='search-input'>
-      <label htmlFor={props.id}>{props.label}</label>
+      <label className='search-input-item' htmlFor={props.id}>{props.label}</label>
       <input
         type={props.type}
         id={props.id}
