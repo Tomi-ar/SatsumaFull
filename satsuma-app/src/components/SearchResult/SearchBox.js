@@ -29,7 +29,7 @@ const SearchBox = (props) => {
 export default SearchBox;
 
 
-{/* <div className="search-box">
+/*{ <div className="search-box">
 <div id={props._id} className="search-box__desc">
   <div className='search-box__titulo'>
     <p className='search-box__titulo-material'>{props.material}</p>
@@ -44,4 +44,4 @@ export default SearchBox;
     <i>Img tacho</i>
   </a>
 </div>
-</div> */}
+</div> }*/

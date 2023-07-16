@@ -25,7 +25,7 @@ const MaterialDetail = (props) => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   // console.log(details.macroCat.COMENTARIOS)
 
