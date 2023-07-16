@@ -1,0 +1,4 @@
+[[headers]]
+  for = "satsuma-app/build/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
