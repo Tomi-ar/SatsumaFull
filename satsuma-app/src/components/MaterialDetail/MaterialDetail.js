@@ -9,7 +9,7 @@ const MaterialDetail = (props) => {
   const [details, setDetails] = useState([]);
   const [comentarios, setComentarios] = useState([])
   const [loading, setLoading] = useState(false);
-  const URI = "https://satsuma-app.herokuapp.com/materiales/id/";
+  const URI = "https://cute-souffle-34850e.netlify.app/materiales/id/";
 
   useEffect(() => {
     setLoading(true);

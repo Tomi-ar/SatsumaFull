@@ -11,7 +11,7 @@ const SearchHome = (props) => {
   const [palabraBusqueda, setPalabraBusqueda] = useState("");
   const [materials, setMaterials] = useState([]);
 
-  const URI = "https://satsuma-app.herokuapp.com/materiales/";
+  const URI = "https://cute-souffle-34850e.netlify.app/materiales/";
 
   const getMaterials = () => {
     axios
