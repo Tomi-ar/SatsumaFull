@@ -12,7 +12,7 @@
         "start": "node index.js",
         "heroku-prebuild": "",
         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd satsuma-app && npm install && npm run build",
-        "deploy-prod": "NPM_CONFIG_PRODUCTION=false cd satsuma-app && npm install && npm run build"
+        "deploy-prod": "NPM_CONFIG_PRODUCTION=false npm start && cd satsuma-app && npm install && npm run build"
     },
     "keywords": [],
     "author": "",
