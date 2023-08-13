@@ -19,10 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname+"/satsuma-app/build"));
 
 // ROUTER
-const materiales = require("./src/routes/materiales");
-app.use("/materiales", materiales);
-const usuarios = require("./src/routes/users");
-app.use("/login", usuarios);
+// const materiales = require("./src/routes/materiales");
+// app.use("/materiales", materiales);
+// const usuarios = require("./src/routes/users");
+// app.use("/login", usuarios);
 
 app.get('*', (req,res) => {
   res.sendFile(__dirname+'/satsuma-app/build/'+'index.html')
