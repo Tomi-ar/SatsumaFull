@@ -32,6 +32,6 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.listen(process.env.PORT , () => {
+app.listen(process.env.PORT || 8002, () => {
   console.log(`Escuchando en el puerto ${process.env.PORT}`);
 });

@@ -10,6 +10,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "devMode": "nodemon index.js",
         "start": "node index.js",
+        "build": "npm i",
         "heroku-prebuild": "",
         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd satsuma-app && npm install && npm run build",
         "deploy-prod": "NPM_CONFIG_PRODUCTION=true && cd satsuma-app && npm install && npm run build"
