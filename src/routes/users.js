@@ -34,7 +34,7 @@ const auth = function(req, res, next){
 }
 
 router.get("/", (req, res) => {
-  res.send("Pagina principal");
+  res.send("Pagina login principal");
 });
 router.post("/userLogin", auth, (req, res) => {
   res.send("Pagina userLogin");

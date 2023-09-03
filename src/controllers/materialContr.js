@@ -2,7 +2,7 @@ const Materiales = require("../containers/materialCont");
 const materialCont = new Materiales();
 
 const renderBuscador = async (req, res) => {
-  res.render("buscador");
+  res.send("buscador materiales");
 };
 
 const newController = async (req, res) => {
