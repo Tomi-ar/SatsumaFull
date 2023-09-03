@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config();
 require("./src/config/mongoDB");
+const PORT = process.env.PORT || 8002;
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 // MOTOR DE PLANTILLAS
 // app.set("view engine", "ejs");
 // app.set("views", __dirname + "/views");
-app.use(express.static(__dirname+"/satsuma-app/build"));
+// app.use(express.static(__dirname+"/satsuma-app/build"));
 
 // ROUTER
 const materiales = require("./src/routes/materiales");
@@ -24,14 +25,14 @@ app.use("/materiales", materiales);
 const usuarios = require("./src/routes/users");
 app.use("/login", usuarios);
 
-app.get('*', (req,res) => {
-  res.sendFile(__dirname+'/satsuma-app/build/'+'index.html')
-})
+//app.get('*', (req,res) => {
+//  res.sendFile(__dirname+'/satsuma-app/build/'+'index.html')
+//})
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.send("home");
 });
 
-app.listen(process.env.PORT , () => {
-  console.log(`Escuchando en el puerto ${process.env.PORT}`);
+app.listen( PORT, () => {
+  console.log(`Escuchando en el puerto ${PORT}`);
 });

@@ -9,7 +9,7 @@ const MaterialDetail = (props) => {
   const [details, setDetails] = useState([]);
   const [comentarios, setComentarios] = useState([])
   const [loading, setLoading] = useState(false);
-  const URI = "https://cute-souffle-34850e.netlify.app/materiales/id/";
+  const URI = "http://localhost:8002/materiales/id/";
 
   useEffect(() => {
     setLoading(true);

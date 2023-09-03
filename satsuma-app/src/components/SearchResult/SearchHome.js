@@ -11,7 +11,7 @@ const SearchHome = (props) => {
   const [palabraBusqueda, setPalabraBusqueda] = useState("");
   const [materials, setMaterials] = useState([]);
 
-  const URI = "https://cute-souffle-34850e.netlify.app/materiales/";
+  const URI = "http://localhost:8002/materiales/";
 
   const getMaterials = () => {
     axios
