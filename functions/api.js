@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // ROUTER
 const materiales = require("../src/routes/materiales");
-app.use("/materiales", materiales);
+app.use("/.netlify/functions/api/materiales", materiales);
 const usuarios = require("../src/routes/users");
-app.use("/login", usuarios);
+app.use("/.netlify/functions/api/login", usuarios);
 
 // app.get('*', (req,res) => {
 //   res.sendFile(__dirname+'/dist/'+'index.html')

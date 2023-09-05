@@ -8,9 +8,9 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "devMode": "nodemon index.js",
-        "start": "node index.js",
-        "build": "npm i",
+        "devMode": "nodemon cd functions api.js",
+        "start": "node cd functions api.js",
+        "build": "netlify deploy --prod",
         "heroku-prebuild": "",
         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd satsuma-app && npm install && npm run build",
         "deploy-prod": "NPM_CONFIG_PRODUCTION=true && cd satsuma-app && npm install && npm run build"
@@ -29,8 +29,11 @@
         "express": "^4.17.3",
         "express-session": "^1.17.3",
         "mongoose": "^6.3.0",
+        "netlify-cli": "^16.2.0",
+        "netlify-lambda": "^2.0.16",
         "passport": "^0.6.0",
-        "passport-local": "^1.0.0"
+        "passport-local": "^1.0.0",
+        "serverless-http": "^3.2.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.15"
