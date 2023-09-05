@@ -1,8 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config();
-require("./src/config/mongoDB");
+require("../src/config/mongoDB");
 PORT = process.env.PORT
+const serverless = require("serverless-http")
 
 const app = express();
 
@@ -20,9 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(__dirname+"/satsuma-app/dist"));
 
 // ROUTER
-const materiales = require("./src/routes/materiales");
+const materiales = require("../src/routes/materiales");
 app.use("/materiales", materiales);
-const usuarios = require("./src/routes/users");
+const usuarios = require("../src/routes/users");
 app.use("/login", usuarios);
 
 // app.get('*', (req,res) => {
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
   res.send("home page");
 });
 
-app.listen( PORT || 8002, () => {
-  console.log(`Escuchando en el puerto ${process.env.PORT}`);
-});
+// app.listen( PORT || 8002, () => {
+//   console.log(`Escuchando en el puerto ${process.env.PORT}`);
+// });
+module.exports.handler = serverless(app)
